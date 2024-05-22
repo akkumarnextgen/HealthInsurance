@@ -20,10 +20,10 @@ function Pages() {
       case "1":
         setPage("pageone");
         break;
-      case "2":
+      case "3":
         setPage("pagetwo");
         break;
-      case "3":
+      case "2":
         setPage("pagethree");
         break;
       case "4":
@@ -35,7 +35,7 @@ function Pages() {
   };
 
   return (
-    <div className="App">
+    <div className="App min-h-[80vh]">
       <Logo />
       <MultiStepProgressBar page={page} onPageNumberClick={nextPageNumber} />
       {

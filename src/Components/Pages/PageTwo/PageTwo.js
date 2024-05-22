@@ -73,7 +73,7 @@ const PageTwo = ({ onButtonClick }) => {
             }}
             type="submit"
             value="Create Workspace"
-            onClick={() => onButtonClick("pagethree")}
+            onClick={() => onButtonClick("pagefour")}
           />
         </div>
       </form>

@@ -5,7 +5,7 @@ import Pages from "./Pages";
 
 function HomePage() {
   return (
-    <div>
+    <div className="!bg-white">
       <Navbar />
       <Pages />
       <Footer />

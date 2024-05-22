@@ -6,9 +6,9 @@ const MultiStepProgressBar = ({ page, onPageNumberClick }) => {
   var stepPercentage = 0;
   if (page === "pageone") {
     stepPercentage = 16;
-  } else if (page === "pagetwo") {
-    stepPercentage = 49.5;
   } else if (page === "pagethree") {
+    stepPercentage = 49.5;
+  } else if (page === " pagetwo") {
     stepPercentage = 82.5;
   } else if (page === "pagefour") {
     stepPercentage = 100;

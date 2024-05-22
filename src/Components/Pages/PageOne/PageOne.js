@@ -61,8 +61,8 @@ const PageOne = ({ onButtonClick }) => {
               backgroundColor: "#664DE5",
             }}
             type="submit"
-            value="Create Workspace"
-            onClick={() => onButtonClick("pagetwo")}
+            value="Continue"
+            onClick={() => onButtonClick("pagethree")}
           />
         </div>
       </form>
