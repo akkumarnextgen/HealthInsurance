@@ -7,17 +7,23 @@ const PageOne = ({ onButtonClick }) => {
       className="pt5 black-80 center"
       style={{ maxWidth: "40%", maxHeight: "30%", margin: "auto" }}>
       <form className="measure">
-        <h2>Welcome! First things first...</h2>
-        <p style={{ color: "#C0C0C0" }}>You can always change them later.</p>
+        <h2>
+          Welcome! <br />
+          Get your health insured now!
+        </h2>
+        <p style={{ color: "#C0C0C0" }}>
+          Let's start your health insurance scheme with basic details.
+        </p>
         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
           <div className="mt3">
             <label
               className="db lh-copy f6 mb1"
               htmlFor="full-name"
               style={{ textAlign: "left" }}>
-              Full Name
+              Full Name*
             </label>
             <input
+              required
               className="f6 br2 ph3 pv2 mb2 dib black w-100"
               type="text"
               name="full-name"
@@ -36,14 +42,14 @@ const PageOne = ({ onButtonClick }) => {
               className="db lh-copy f6 mb1"
               htmlFor="display-name"
               style={{ textAlign: "left" }}>
-              Display Name
+              Email Id*
             </label>
             <input
               className="f6 br2 ph3 pv2 mb2 dib black w-100"
               type="text"
               name="display-name"
               id="display-name"
-              placeholder="Steve"
+              placeholder="user@site.domain"
               style={{
                 borderStyle: "solid",
                 borderWidth: "1px",

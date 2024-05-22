@@ -20,9 +20,10 @@ const PageThree = ({ onButtonClick }) => {
     <main
       className="pt5 black-80"
       style={{ maxWidth: "50%", maxHeight: "25%", margin: "auto" }}>
-      <h2>How are you planning to use Eden?</h2>
+      <h2>Who are the lucky ones getting the health protection?</h2>
       <p style={{ color: "#C0C0C0" }}>
-        We'll streamline your setup experience accordingly.
+        Select the people whom you wish to include in the health insurance
+        package.
       </p>
       <div
         className="center ph4 selectionDiv"
@@ -38,9 +39,6 @@ const PageThree = ({ onButtonClick }) => {
             alt="user-icon"
           />
           <h1 className="f4 pl2 pr2">For myself</h1>
-          <p className="lh-copy f6 black-70 pl2 pr2">
-            Write better. Think more clearly. Stay organized.
-          </p>
         </div>
         <div
           className="mw5 bg-white br3 pa3 mv3 ba dib b--black-10 ma3 clicked"
@@ -53,9 +51,6 @@ const PageThree = ({ onButtonClick }) => {
             alt="users-icon"
           />
           <h1 className="f4 pl2 pr2">With my team</h1>
-          <p className="lh-copy  f6 black-70 pl2 pr2 desc">
-            Wikis, docs, tasks and projects, all in one place.
-          </p>
         </div>
       </div>
       <input
