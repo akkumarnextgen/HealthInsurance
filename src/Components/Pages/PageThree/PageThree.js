@@ -12,14 +12,14 @@ const PageThree = ({ onButtonClick }) => {
 
   // Array of objects containing information about each person
   const [persons, setPersons] = useState([
-    { id: 1, name: "Self", selected: false, image: user },
-    { id: 2, name: "Son", selected: false, image: user },
-    { id: 3, name: "Daughter", selected: false, image: user },
-    { id: 4, name: "Spouse", selected: false, image: user },
-    { id: 5, name: "Father", selected: false, image: user },
-    { id: 6, name: "Mother", selected: false, image: user },
-    { id: 7, name: "Father-in-law", selected: false, image: user },
-    { id: 8, name: "Mother-in-law", selected: false, image: user },
+    { id: 1, name: "👨 Self", selected: false, image: user },
+    { id: 2, name: "👦 Son", selected: false, image: user },
+    { id: 3, name: "👧 Daughter", selected: false, image: user },
+    { id: 4, name: "👩 Spouse", selected: false, image: user },
+    { id: 5, name: "👴 Father", selected: false, image: user },
+    { id: 6, name: "👵 Mother", selected: false, image: user },
+    { id: 7, name: "👴🏻Father-in-law", selected: false, image: user },
+    { id: 8, name: "👵🏻 Mother-in-law", selected: false, image: user },
     // Add more persons as needed
   ]);
 
@@ -45,33 +45,27 @@ const PageThree = ({ onButtonClick }) => {
   return (
     <main
       className="pt5 black-80"
-      style={{ maxWidth: "50%", maxHeight: "25%", margin: "auto" }}>
+      style={{ maxWidth: "100%", maxHeight: "25%", margin: "auto" }}>
       <h2>Who are the lucky ones getting the health protection?</h2>
       <p style={{ color: "#C0C0C0" }}>
         Select the people whom you wish to include in the health insurance
         package.
       </p>
       <div
-        className="center ph4 selectionDiv"
-        style={{ width: "80%", height: "80%" }}>
+        className="center ph4 selectionDiv "
+        style={{ width: "100%", height: "80%" }}>
         {persons.map((person) => (
           <div
             key={person.id}
             className="clicked person-div"
             style={{ borderColor: person.selected ? "#664DE5" : "#EAEEF5" }}
             onClick={() => handlePersonClick(person.id)}>
-            <img
-              src={person.image}
-              className="h2 w2"
-              title="single user icon"
-              alt="user-icon"
-            />
-            <h1 className="">{person.name}</h1>
+            <h1 className="person-heading">{person.name}</h1>
           </div>
         ))}
       </div>
       <input
-        className="f6 grow br2 ph3 pv2 mb2 dib white submitButton"
+        className="f6 grow br2 ph3 pv2 mb2 dib white submitButton !w-fit mt-[24px]"
         style={{
           borderStyle: "none",
           width: "66%",
