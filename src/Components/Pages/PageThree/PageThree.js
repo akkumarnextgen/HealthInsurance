@@ -4,14 +4,40 @@ import users from "./users.png";
 import "./PageThree.css";
 
 const PageThree = ({ onButtonClick }) => {
+  // State to manage single user selection
   const [singleUser, setSingleUser] = useState(false);
 
+  // State to manage multi-user selection
+  const [multiUser, setMultiUser] = useState(false);
+
+  // Array of objects containing information about each person
+  const [persons, setPersons] = useState([
+    { id: 1, name: "Self", selected: false, image: user },
+    { id: 2, name: "Son", selected: false, image: user },
+    { id: 3, name: "Daughter", selected: false, image: user },
+    { id: 4, name: "Spouse", selected: false, image: user },
+    { id: 5, name: "Father", selected: false, image: user },
+    { id: 6, name: "Mother", selected: false, image: user },
+    { id: 7, name: "Father-in-law", selected: false, image: user },
+    { id: 8, name: "Mother-in-law", selected: false, image: user },
+    // Add more persons as needed
+  ]);
+
+  // Function to toggle person selection
+  const handlePersonClick = (id) => {
+    setPersons((prevPersons) =>
+      prevPersons.map((person) =>
+        person.id === id ? { ...person, selected: !person.selected } : person
+      )
+    );
+  };
+
+  // Function to toggle single user selection
   const onClickSingleUser = () => {
     setSingleUser((prevSingleUser) => !prevSingleUser);
   };
 
-  const [multiUser, setMultiUser] = useState(false);
-
+  // Function to toggle multi-user selection
   const onClickMultiUser = () => {
     setMultiUser((prevMultiUser) => !prevMultiUser);
   };
@@ -28,30 +54,21 @@ const PageThree = ({ onButtonClick }) => {
       <div
         className="center ph4 selectionDiv"
         style={{ width: "80%", height: "80%" }}>
-        <div
-          className="mw5 bg-white br3 pa3 mv3 ba dib b--black-10 ma3 clicked"
-          style={{ borderColor: singleUser ? "#664DE5" : "#EAEEF5" }}
-          onClick={onClickSingleUser}>
-          <img
-            src={user}
-            className="h2 w2"
-            title="single user icon"
-            alt="user-icon"
-          />
-          <h1 className="f4 pl2 pr2">Self</h1>
-        </div>
-        <div
-          className="mw5 bg-white br3 pa3 mv3 ba dib b--black-10 ma3 clicked"
-          style={{ borderColor: multiUser ? "#664DE5" : "#EAEEF5" }}
-          onClick={onClickMultiUser}>
-          <img
-            src={users}
-            className="h2 w2"
-            title="multi user icon"
-            alt="users-icon"
-          />
-          <h1 className="f4 pl2 pr2">Son</h1>
-        </div>
+        {persons.map((person) => (
+          <div
+            key={person.id}
+            className="clicked person-div"
+            style={{ borderColor: person.selected ? "#664DE5" : "#EAEEF5" }}
+            onClick={() => handlePersonClick(person.id)}>
+            <img
+              src={person.image}
+              className="h2 w2"
+              title="single user icon"
+              alt="user-icon"
+            />
+            <h1 className="">{person.name}</h1>
+          </div>
+        ))}
       </div>
       <input
         className="f6 grow br2 ph3 pv2 mb2 dib white submitButton"

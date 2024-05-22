@@ -12,6 +12,14 @@
   border-color: #664de5;
 }
 
+.person-div {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 1228px) {
   .selectionDiv {
     flex-wrap: wrap;
