@@ -38,7 +38,7 @@ const PageThree = ({ onButtonClick }) => {
             title="single user icon"
             alt="user-icon"
           />
-          <h1 className="f4 pl2 pr2">For myself</h1>
+          <h1 className="f4 pl2 pr2">Self</h1>
         </div>
         <div
           className="mw5 bg-white br3 pa3 mv3 ba dib b--black-10 ma3 clicked"
@@ -50,7 +50,7 @@ const PageThree = ({ onButtonClick }) => {
             title="multi user icon"
             alt="users-icon"
           />
-          <h1 className="f4 pl2 pr2">With my team</h1>
+          <h1 className="f4 pl2 pr2">Son</h1>
         </div>
       </div>
       <input
