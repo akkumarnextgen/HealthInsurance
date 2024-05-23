@@ -18,7 +18,7 @@ import {
 } from "@coreui/react";
 import { useState } from "react";
 import "@coreui/coreui/dist/css/coreui.min.css";
-import logo from "./../../MainData/Logo/Sitram-Black.png";
+import logo from "./Medicare.png";
 import "./Navbar.css";
 
 function Navbar() {
