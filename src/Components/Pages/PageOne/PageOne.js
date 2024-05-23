@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./PageOne.css";
+import InsuranceContext from "../../../Context/InsuranceContext";
 
 const PageOne = ({ onButtonClick }) => {
+  const { updateInsuranceData } = useContext(InsuranceContext);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateInsuranceData(formData);
+    onButtonClick("pagethree");
+  };
+
   return (
     <main
       className="pt5 black-80 center"
       style={{ maxWidth: "40%", maxHeight: "30%", margin: "auto" }}>
-      <form className="measure">
+      <form className="measure" onSubmit={handleSubmit}>
         <h2>
           Welcome! <br />
           Get your health insured now!
@@ -26,7 +47,7 @@ const PageOne = ({ onButtonClick }) => {
               required
               className="f6 br2 ph3 pv2 mb2 dib black w-100 bg-[white]"
               type="text"
-              name="full-name"
+              name="name"
               id="full-name"
               size="30"
               placeholder="Steve Jobs"
@@ -35,6 +56,7 @@ const PageOne = ({ onButtonClick }) => {
                 borderWidth: "1px",
                 borderColor: "#EAEEF5",
               }}
+              onChange={handleInputChange}
             />
           </div>
           <div className="mv3">
@@ -47,7 +69,7 @@ const PageOne = ({ onButtonClick }) => {
             <input
               className="f6 br2 ph3 pv2 mb2 dib black w-100 bg-[white]"
               type="text"
-              name="display-name"
+              name="email"
               id="display-name"
               placeholder="user@site.domain"
               style={{
@@ -55,6 +77,7 @@ const PageOne = ({ onButtonClick }) => {
                 borderWidth: "1px",
                 borderColor: "#EAEEF5",
               }}
+              onChange={handleInputChange}
             />
           </div>
         </fieldset>
@@ -68,7 +91,6 @@ const PageOne = ({ onButtonClick }) => {
             }}
             type="submit"
             value="Continue"
-            onClick={() => onButtonClick("pagethree")}
           />
         </div>
       </form>

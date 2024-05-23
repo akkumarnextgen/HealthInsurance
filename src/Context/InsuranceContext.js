@@ -1,13 +1,11 @@
-// InsuranceContext.js
 import React, { createContext, useState } from "react";
 
 const InsuranceContext = createContext();
 
 export const InsuranceProvider = ({ children }) => {
   const [insuranceData, setInsuranceData] = useState({
-    numPersons: 1,
-    ages: [],
-    // Add more fields as needed
+    name: "",
+    email: "",
   });
 
   const updateInsuranceData = (newData) => {

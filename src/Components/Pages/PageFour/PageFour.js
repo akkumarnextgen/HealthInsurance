@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import tick from "./tick.jpg";
+import InsuranceContext from "../../../Context/InsuranceContext";
 
 const PageFour = () => {
+  const { insuranceData } = useContext(InsuranceContext);
   return (
     <div
       className="mw5 bg-white pa2-ns mt5 dib text-center"
@@ -13,21 +15,16 @@ const PageFour = () => {
         alt="tick-icon"
       />
       <div className="center">
-        <h3 className="">Congratulations, Eren!</h3>
+        <h3 className="">
+          Thank you for your interest,{" "}
+          <span className="text-[#2153ac] font-bold">{insuranceData.name}</span>
+          !
+        </h3>
       </div>
       <p style={{ color: "#C0C0C0" }}>
-        You have completed the onboarding, you can start using the Eden!
+        We will get back to you shortly at your email id {insuranceData.email}{" "}
+        for proceeding with your policy!
       </p>
-      <input
-        className="f6 grow br2 ph3 pv2 mb2 dib white"
-        style={{
-          borderStyle: "none",
-          width: "100%",
-          backgroundColor: "#664DE5",
-        }}
-        type="submit"
-        value="Launch Eden"
-      />
     </div>
   );
 };

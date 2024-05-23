@@ -65,7 +65,7 @@ const PageThree = ({ onButtonClick }) => {
         ))}
       </div>
       <input
-        className="f6 grow br2 ph3 pv2 mb2 dib white submitButton !w-fit mt-[24px]"
+        className="f6 grow br2 ph3 pv2 mb2 dib white submitButton !w-fit mt-[24px] min-w-[350px]"
         style={{
           borderStyle: "none",
           width: "66%",
