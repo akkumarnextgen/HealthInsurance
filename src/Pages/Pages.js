@@ -35,7 +35,7 @@ function Pages() {
   };
 
   return (
-    <div className="App min-h-[80vh]">
+    <div className="App min-h-[70vh] h-fit">
       <Logo />
       <MultiStepProgressBar page={page} onPageNumberClick={nextPageNumber} />
       {
