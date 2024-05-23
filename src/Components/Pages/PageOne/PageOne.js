@@ -24,7 +24,7 @@ const PageOne = ({ onButtonClick }) => {
             </label>
             <input
               required
-              className="f6 br2 ph3 pv2 mb2 dib black w-100"
+              className="f6 br2 ph3 pv2 mb2 dib black w-100 bg-[white]"
               type="text"
               name="full-name"
               id="full-name"
@@ -45,7 +45,7 @@ const PageOne = ({ onButtonClick }) => {
               Email Id*
             </label>
             <input
-              className="f6 br2 ph3 pv2 mb2 dib black w-100"
+              className="f6 br2 ph3 pv2 mb2 dib black w-100 bg-[white]"
               type="text"
               name="display-name"
               id="display-name"

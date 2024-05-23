@@ -4,9 +4,14 @@ import tick from "./tick.jpg";
 const PageFour = () => {
   return (
     <div
-      className="mw5 bg-white pa2-ns mt5 dib"
+      className="mw5 bg-white pa2-ns mt5 dib text-center"
       style={{ maxWidth: "30%", maxHeight: "30%" }}>
-      <img src={tick} className="h3 w3" title="success icon" alt="tick-icon" />
+      <img
+        src={tick}
+        className="h3 w3 m-auto"
+        title="success icon"
+        alt="tick-icon"
+      />
       <div className="center">
         <h3 className="">Congratulations, Eren!</h3>
       </div>
