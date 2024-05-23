@@ -4,14 +4,14 @@ import "./Logo.css";
 
 const Logo = () => {
   return (
-    <div className="ma5 center">
+    <div className="ma5 center align-items-center">
       <img
         className=""
         style={{ width: "45px", height: "45px" }}
         src={logo2}
         alt="logo"
       />
-      <span className="mt3 f4">Eden</span>
+      <span className=" f4">Medicare</span>
     </div>
   );
 };

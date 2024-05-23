@@ -67,8 +67,9 @@ const PageOne = ({ onButtonClick }) => {
               Email Id*
             </label>
             <input
+              required
               className="f6 br2 ph3 pv2 mb2 dib black w-100 bg-[white]"
-              type="text"
+              type="email"
               name="email"
               id="display-name"
               placeholder="user@site.domain"
